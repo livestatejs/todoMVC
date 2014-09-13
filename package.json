@@ -1,0 +1,25 @@
+{
+  "name": "livestate",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.9.0",
+    "q": "^1.0.1"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jasmine": "^0.7.0",
+    "grunt-jslint": "^1.1.12",
+    "grunt-mocha": "^0.4.11",
+    "grunt-selenium-webdriver": "^0.2.422",
+    "jasmine": "^2.0.1",
+    "jasmine-node": "^1.14.5",
+    "supertest": "^0.13.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
