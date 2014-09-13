@@ -19,6 +19,24 @@ module.exports = function(grunt) {
                     }
                 }
             },
+            jasmine_node: {
+                options: {
+                    forceExit: true,
+                    match: '.',
+                    matchall: false,
+                    extensions: 'js',
+                    specNameMatcher: 'Spec'
+                },
+                all: ['specs/']
+            },
+            cucumberjs: {
+                options: {
+                    format: 'html',
+                    output: './public/report.html',
+                    theme: 'foundation'
+                },
+                features: []
+            },
             jslint: {
                 default: {
                     src: all,
@@ -43,7 +61,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-contrib-jasmine');
     grunt.loadNpmTasks('grunt-jslint');
+    grunt.loadNpmTasks('grunt-jasmine-node');
+    grunt.loadNpmTasks('grunt-selenium-webdriver');
+    grunt.loadNpmTasks('grunt-cucumberjs');
 
 
-    grunt.registerTask('default', ['jslint','jasmine']);
+    grunt.registerTask('default', ['jslint', 'cucumberjs']);
 };
