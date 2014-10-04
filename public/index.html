@@ -1,8 +1,16 @@
 <html>
     <body>
         <div id="list">
-            <div class="item"></div>
-            <div class="item"></div>
         </div>
+        
+        <script>
+            var oReq = new XMLHttpRequest(),
+                list = document.querySelector('#list');
+            oReq.onload = function () {
+                console.log(arguments);                
+            }
+            oReq.open("get", '/todos', true);
+            oReq.send();
+        </script>
     </body>
 </html>

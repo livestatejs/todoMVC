@@ -7,4 +7,10 @@ Feature: Todolist displayed
     Scenario: Displaying the list
     
         Given I am on the homepage
-        Then I should see 2 items in the list
+        Then I should see <items.count> items in the list
+        
+    Scenario: First element's value is correct 
+    
+        Given I am on the homepage
+        Then the 1. list item's value is <items.1.title>
+        Then the 2. list item's value is <items.2.title>

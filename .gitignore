@@ -2,3 +2,4 @@ node_modules
 .c9
 .grunt
 _SpecRunner.html
+public/report.html
